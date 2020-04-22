@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Film Page</title>
+</head>
+
+<header>
+    {{>navbar}}
+</header>
+
+<body>
+    <h1>Film Database</h1>
+
+    {{#each data}}
+    <div class="container">
+        <h2 id="showImage">{{this.name}}</h2>
+        <img id="img" src="img1.jpg">
+        
+        <h3>Main Actor: <span id="actor">{{this.actor}}</span></h2>
+        
+        <h3>Film Description:</h2>
+        <p id="description">{{this.description}}</p>
+        
+        <h3>Year Released: <span id="year">{{this.year}}</span></h2>
+        
+        <form action="/editFilm/{{this._id}}?_method=PUT" method="POST">
+            <button type="submit">Edit Film</button>
+        </form>
+        <form action="/delete/{{this._id}}?_method=DELETE" method="POST">
+            <button type="submit">Delete Film</button>
+        </form>
+
+        </hr>
+    </div>
+    {{/each}}
+
+    <script src="/index.js"></script>
+</body>
+
+</html>

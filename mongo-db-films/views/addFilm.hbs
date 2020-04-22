@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <title>Add Film</title>
+</head>
+
+<header>
+    {{>navbar}}
+</header>
+
+<body>
+    <form action="/addFilm/film" method="POST">
+
+        <label for="name">Movie Name</label>
+        <input type="text" name="name">
+
+        <label for="actor">Main Actor</label>
+        <input type="text" name="actor">
+
+        <label for="description">Movie Description</label>
+        <input type="text" name="description">
+
+        <label for="year">Year Released</label>
+        <input type="number" name="year">
+
+        <button type="submit">Add Film</button>
+        
+    </form>
+</body>
+</html>

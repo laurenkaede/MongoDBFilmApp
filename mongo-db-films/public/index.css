@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.774);
+  font-family: "Handlee", cursive;
+  text-align: center;
+  padding: 10px;
+  padding-top: 30px;
+  font-size: 48px;
+  text-shadow: 3px 3px #313030;
+}
+
+.container {
+  display: inline-block;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  color: white;
+  background-color: black;
+  margin: 20px 5px;
+  padding: 20px;
+  max-width: 32.5%;
+  max-height:100vh;
+  text-align: start;
+  font-weight: bold;
+  border: 4px solid #d16ba5;
+}
+
+#img {
+  visibility: hidden;
+  display: inline-block;
+  justify-content: center;
+  border: 2px solid #5ffbf1;
+  margin-bottom: 20px;
+  margin-left: 35%;
+}
+
+#showImage {
+  text-align: center;
+  color: #d16ba5;
+  font-family: "Handlee", cursive;
+  text-align: center;
+  padding: 10px;
+  padding-top: 30px;
+  font-size: 36px;
+  text-decoration: underline;
+}
+
+#actor {
+  color: #aa8fd8;
+  font-family: "IBM Plex Sans";
+}
+
+#description {
+  color: #52cffe;
+  font-family: "IBM Plex Sans";
+}
+
+#year {
+  color: #5ffbf1;
+  font-family: "IBM Plex Sans";
+}

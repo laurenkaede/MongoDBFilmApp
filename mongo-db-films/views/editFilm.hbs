@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <title>Edit Film</title>
+</head>
+
+<header>
+    {{>navbar}}
+</header>
+
+<body>
+    <h1>Edit Film Page</h1>
+        
+    <form action="/editFilm/{{data._id}}/success?_method=PUT" method="POST">
+
+        <label for="editName">Movie Name:</label>
+        <input type="text" name="editName" value="{{data.name}}">
+
+        <label for="editActor">Main Actor:</label>
+        <input type="text" name="editActor" {{data.actor}}>
+
+        <label for="editDescription">Film Description:</label>
+        <input type="text" name="editDescription" value="{{data.description}}">
+
+        <label for="editYear">Year Released:</label>
+        <input type="number" name="editYear" value="{{data.year}}">
+
+        <button type="submit">Update Film</button>
+    </form>
+
+</body>
+
+</html>
