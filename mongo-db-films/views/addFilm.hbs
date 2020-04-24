@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="addFilm.css">
     <title>Add Film</title>
 </head>
 
@@ -12,22 +14,25 @@
 </header>
 
 <body>
-    <form action="/addFilm/film" method="POST">
+    <div class="container">
+        <form action="/addFilm/film" method="POST">
 
-        <label for="name">Movie Name</label>
-        <input type="text" name="name">
+            <label for="name">Movie Name </label>
+            <input type="text" name="name">
 
-        <label for="actor">Main Actor</label>
-        <input type="text" name="actor">
+            <label for="actor">Main Actor </label>
+            <input type="text" name="actor">
 
-        <label for="description">Movie Description</label>
-        <input type="text" name="description">
+            <label for="description">Movie Description </label>
+            <textarea id="desc" name="description" rows="10" cols="30"></textarea>
 
-        <label for="year">Year Released</label>
-        <input type="number" name="year">
+            <label for="year">Year Released </label>
+            <input type="number" name="year">
 
-        <button type="submit">Add Film</button>
-        
-    </form>
+            <button type="submit">Add Film</button>
+            <input id="reset" type="reset">
+        </form>
+    </div>
 </body>
+
 </html>

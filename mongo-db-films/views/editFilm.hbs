@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="editFilm.css">
     <title>Edit Film</title>
 </head>
 
@@ -13,25 +14,26 @@
 </header>
 
 <body>
-    <h1>Edit Film Page</h1>
-        
-    <form action="/editFilm/{{data._id}}/success?_method=PUT" method="POST">
+    <div class="container">
+        <h1>Edit Film Page</h1>
 
-        <label for="editName">Movie Name:</label>
-        <input type="text" name="editName" value="{{data.name}}">
+        <form action="/editFilm/{{data._id}}/success?_method=PUT" method="POST">
 
-        <label for="editActor">Main Actor:</label>
-        <input type="text" name="editActor" {{data.actor}}>
+            <label for="editName">Movie Name:</label>
+            <input type="text" name="editName" value="{{data.name}}">
 
-        <label for="editDescription">Film Description:</label>
-        <input type="text" name="editDescription" value="{{data.description}}">
+            <label for="editActor">Main Actor:</label>
+            <input type="text" name="editActor" {{data.actor}}>
 
-        <label for="editYear">Year Released:</label>
-        <input type="number" name="editYear" value="{{data.year}}">
+            <label for="editDescription">Film Description:</label>
+            <textarea id="desc" name="editDescription" rows="10" cols="30" value="{{data.description}}"></textarea>
 
-        <button type="submit">Update Film</button>
-    </form>
+            <label for="editYear">Year Released:</label>
+            <input type="number" name="editYear" value="{{data.year}}">
 
+            <button type="submit">Update Film</button>
+        </form>
+    </div>
 </body>
 
 </html>

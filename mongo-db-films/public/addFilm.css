@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cinzel|Oxanium&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+    margin: 30px;
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+label {
+    font-size: 36px;
+    font-family: "Oxanium", cursive;
+    
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    margin-right: 95%;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+textarea {
+  margin-right: 95%;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+#desc {
+    width: 400px;
+    height: 100px;
+    justify-content: start;
+    font-size: 16px;
+}
+
+#reset, button {
+  font-family: "Oxanium", cursive;
+  background-color: #d16ba5;
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  text-shadow: 1px 1px 1px rgb(66, 66, 66), 3px 3px 8px rgb(164, 132, 170);
+  font-weight: 600;
+  border-radius: 5px;
+  border: 2px solid white;
+}

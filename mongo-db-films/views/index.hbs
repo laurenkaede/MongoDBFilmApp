@@ -16,30 +16,50 @@
 <body>
     <h1>Film Database</h1>
 
-    {{#each data}}
+{{#each data}}
     <div class="container">
         <h2 id="showImage">{{this.name}}</h2>
-        <img id="img" src="img1.jpg">
-        
+            {{#equal this.name "Rocky" }}
+                <img id="img1" src="img1.jpg">
+            {{/equal}}
+            {{#equal this.name "Beauty and the Beast"}}
+                <img id="img2" src="img2.jpg">
+            {{/equal}}
+            {{#equal this.name "The Matrix"}}
+                <img id="img3" src="img3.jpg">
+            {{/equal}}
+            {{#equal this.name "Lara Croft: Tomb Raider"}}
+                <img id="img4" src="img4.jpg">
+            {{/equal}}
+            {{#equal this.name "Inception"}}
+                <img id="img5" src="img5.jpg">
+            {{/equal}}
+            {{#equal this.name "Avengers: Infinity War"}}
+                <img id="img6" src="img6.jpg">
+            {{/equal}}
+             {{#equal this.name "Grease" }}
+                <img id="img7" src="img7.jpg">
+            {{/equal}}
+            
         <h3>Main Actor: <span id="actor">{{this.actor}}</span></h2>
-        
-        <h3>Film Description:</h2>
-        <p id="description">{{this.description}}</p>
-        
-        <h3>Year Released: <span id="year">{{this.year}}</span></h2>
-        
-        <form action="/editFilm/{{this._id}}?_method=PUT" method="POST">
-            <button type="submit">Edit Film</button>
-        </form>
-        <form action="/delete/{{this._id}}?_method=DELETE" method="POST">
-            <button type="submit">Delete Film</button>
-        </form>
 
-        </hr>
+            <h3>Film Description:</h2>
+                <p id="description">{{this.description}}</p>
+
+                <h3>Year Released: <span id="year">{{this.year}}</span></h2>
+
+                    <div class="button">
+                        <form action="/editFilm/{{this._id}}?_method=PUT" method="POST">
+                            <button class="editbtn" type="submit">Edit Film</button>
+                        </form>
+                        <form action="/delete/{{this._id}}?_method=DELETE" method="POST">
+                            <button class="deletebtn" type="submit">Delete Film</button>
+                        </form>
+                    </div>
+                    </hr>
     </div>
     {{/each}}
 
-    <script src="/index.js"></script>
 </body>
 
 </html>

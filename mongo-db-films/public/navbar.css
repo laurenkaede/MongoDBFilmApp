@@ -8,10 +8,10 @@
 }
 
 nav h3 {
-  color: white;
+  color: #aa8fd8;
   text-decoration: none;
   text-align: start;
-  font-size: 30px;
+  font-size: 36px;
   font-family: "Handlee", cursive;
   margin-top: 10px;
 }
@@ -47,8 +47,9 @@ nav ul li {
 }
 
 nav a {
-  color: white;
+  color: #aa8fd8;
+  font-size: 36px;
   text-decoration: none;
   font-weight: bold;
-  padding: 5px 25px;
+  padding: 5px 45px;
 }

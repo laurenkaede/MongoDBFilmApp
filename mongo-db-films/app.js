@@ -5,6 +5,7 @@ const path = require("path");
 const dotenv = require("dotenv");
 const Film = require("./models/film");
 const methodOverride = require("method-override");
+hbs.registerHelper("equal", require("handlebars-helper-equal"))
 
 const app = express();
 
@@ -92,8 +93,7 @@ app.put("/editFilm/:id/success", async (req, res) => {
     description: req.body.editDescription,
     year: req.body.editYear,
   });
-
-  res.status(200).send("<h1>Film Updated</h1>");
+  res.status(200).send("<h1>Film Updated");
 });
 
 app.delete("/delete/:id", async (req, res) => {
@@ -103,6 +103,6 @@ app.delete("/delete/:id", async (req, res) => {
   res.send("<h1>Film Deleted</h1>");
 });
 
-app.listen(5000, (req, res) => {
-  console.log("Server is running on port 5000");
+app.listen(8000, (req, res) => {
+  console.log("Server is running on port 8000");
 });
